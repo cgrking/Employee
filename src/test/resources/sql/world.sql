@@ -24,3 +24,24 @@ update member
 	set name = '뀨이아',
 		password = '222'
 	where id = 2;
+
+--	
+--City
+--
+
+select 	 id,
+		 name,
+		 countrycode,
+		 district,
+		 population
+	from city;
+
+
+select 	 id,
+		 name,
+		 countrycode,
+		 district,
+		 population
+	from city
+	where countrycode = 'KOR';
+
