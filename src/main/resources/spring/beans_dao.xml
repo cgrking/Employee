@@ -37,7 +37,7 @@
 		<property name="mapperInterface" value="com.hybrid.mapper.CityMapper" />
 		<property name="sqlSessionTemplate" ref="sqlSession"></property>
 
-	</bean>
+	</bean>    
 
 
 </beans>

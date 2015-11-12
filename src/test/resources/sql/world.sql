@@ -1,24 +1,28 @@
 select * from city;
 
 create table member (
-	id	 			int auto_increment,
+	id	 			int,
 	email 			varchar(255),
 	name	 		varchar(255),
 	password	 	varchar(255),
 	register_date	date,
 	constraint pk_id primary key(id)
 );
+
+--Member CURD 
 select * from member;
 
 drop table member;
 
 delete from member
-	where id = 3;
+	where id = 1;
+	
+	create sequence member_id_seq
 
 insert into member
-(email, name, password)
+(id, email, name, password,register_date)
 values
-('xxxx@yyy','가람','1234');
+(member_id_seq.nextval,'xxxx@yyy','가람','1234','2015/11/11');
 
 update member
 	set name = '뀨이아',
