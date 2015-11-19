@@ -4,18 +4,37 @@
 	<select id="selectAll" resultType="com.hybrid.model.City">
 		select *
 
-			from city;
+		from city;
 
 	</select>
 
 	<select id="selectByCountryCode" resultType="com.hybrid.model.City">
-		select 	id,
-				name,
-				countrycode,
-				district,
-				population
-			from city
-			where countrycode = #{countryCode}
+		select id,
+		name,
+		countrycode,
+		district,
+		population
+		from city
+		where countrycode = #{countryCode}
 
 	</select>
+
+	<insert id="insert" parameterType="com.hybrid.model.City">
+		insert into city
+		( 	id,
+			name,
+			countrycode,
+			district,
+			population
+		)
+		values
+		(
+			#{id},
+			#{name},
+			#{countryCode},
+			#{district},
+			#{population}
+		)
+
+	</insert>
 </mapper>

@@ -1,10 +1,32 @@
 select * from dept;
+select * from EMP;
+drop table city;
+
+select * from city;
 
 create table city (
-  id				 int(11) not null,
-  name				 char(35) not null,
-  countrycode		char(3) not null,
-  district 			char(20) not null,
-  population		 int(11) not null,
-  primary key (id)
+  id				 numeric(11),
+  name				 char(50),
+  countrycode		char(3),
+  district 			char(30),
+  population		 numeric(11),
+ constraint city_pk_id primary key (id)
+)
+
+select count(*) from city;
+
+insert into city
+(	id, 
+	name,
+	countrycode, 
+	district,
+	population
+)
+values
+(	
+	11,
+	'seoul',
+	'KOR',
+	'Asia',
+	99998
 )
